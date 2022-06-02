@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const Book = (props) => {
   const { id, name, author } = props;
   return (
-    <li key={id}>
+    <li className='book-item-list' key={id}>
       <p>{name}</p>
       <p>{author}</p>
       <button type="button">Remove</button>

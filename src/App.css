@@ -2,3 +2,69 @@
   padding: 0;
   margin: 0;
 }
+
+.main-app-container {
+  padding: 40px;
+  border: 2px solid rgb(57, 57, 57);
+}
+
+.navBar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 2px solid rgb(57, 57, 57);
+}
+
+.nav-menu-links {
+  text-decoration: none;
+  display: flex;
+  list-style: none;
+  gap: 12px;
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+.nav-menu-links a {
+  text-decoration: none;
+}
+
+.books-list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 25px;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 2px solid rgb(57, 57, 57);
+}
+
+.book-item-list {
+  border: 2px solid rgb(57, 57, 57);
+  padding: 5px;
+}
+
+.book-item-list:nth-child(even) {
+  background-color: rgb(206, 206, 206);
+}
+
+.book-item-list:nth-child(odd) {
+  background-color: rgb(235, 235, 235);
+}
+
+h2 {
+  padding: 20px;
+  border: 2px solid rgb(57, 57, 57);
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 15px;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 20px;
+  border: 2px solid rgb(57, 57, 57);
+}
