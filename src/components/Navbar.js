@@ -4,7 +4,7 @@ import links from '../Routes';
 
 const Navbar = () => (
   <div className="navBar">
-    <h1>BookStore</h1>
+    <h1>BookStore CMS</h1>
     <nav>
       <ul className="nav-menu-links">
         {links.map((link) => (
