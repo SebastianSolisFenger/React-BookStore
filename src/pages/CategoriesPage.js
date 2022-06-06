@@ -1,5 +1,6 @@
 import React from 'react';
+import Categories from '../redux/categories/categories';
 
-const CategoriesPage = () => <button type="button">Check status</button>;
+const CategoriesPage = () => <Categories />;
 
 export default CategoriesPage;
