@@ -5,7 +5,7 @@ import { addBook } from '../redux/books/books';
 const RegistrationBook = () => {
   const dispatch = useDispatch();
 
-  const registerEventBookFunc = (e) => {
+  const registerEventBookHandler = (e) => {
     e.preventDefault();
     const { title, author } = e.target.elements;
     const newBookObj = {
@@ -18,7 +18,7 @@ const RegistrationBook = () => {
   return (
     <>
       <h2>Register books</h2>
-      <form className="register-form" onSubmit={registerEventBookFunc}>
+      <form className="register-form" onSubmit={registerEventBookHandler}>
         <input type="text" id="title" placeholder="Insert the title.." />
         <input type="text" id="author" placeholder="Insert the author.." />
         <button type="submit">Register</button>
