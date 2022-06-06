@@ -19,8 +19,8 @@ const RegistrationBook = () => {
     <>
       <h2>Register books</h2>
       <form className="register-form" onSubmit={registerEventBookFunc}>
-        <input type="text" name="title" placeholder="Insert the title.." />
-        <input type="text" name="author" placeholder="Insert the author.." />
+        <input type="text" id="title" placeholder="Insert the title.." />
+        <input type="text" id="author" placeholder="Insert the author.." />
         <button type="submit">Register</button>
       </form>
     </>

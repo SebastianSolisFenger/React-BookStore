@@ -18,8 +18,8 @@ const books = (state = initialBookDataBase, action) => {
       return [
         ...state,
         {
-          id: state.length,
-          name: action.payload.name,
+          id: state.length + 1,
+          title: action.payload.title,
           author: action.payload.author,
         },
       ];
