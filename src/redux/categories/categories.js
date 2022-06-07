@@ -4,7 +4,7 @@ const CHECK_STATUS = 'CHECK_STATUS';
 // ACTION CREATORS
 export const checkStatus = () => ({ type: CHECK_STATUS });
 
-const categories = (state = [], action) => {
+const Categories = (state = [], action) => {
   switch (action.type) {
     case CHECK_STATUS:
       return 'Under Construction';
@@ -13,4 +13,4 @@ const categories = (state = [], action) => {
   }
 };
 
-export default categories;
+export default Categories;
