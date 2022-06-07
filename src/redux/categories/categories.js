@@ -1,10 +1,10 @@
 // ACTION TYPES FOR CATEGORIES
-const CHECK_STATUS = 'CHECK_STATUS';
+const CHECK_STATUS = 'bookStore/books/CHECK_STATUS';
 
 // ACTION CREATORS
 export const checkStatus = () => ({ type: CHECK_STATUS });
 
-const Categories = (state = [], action) => {
+const categories = (state = [], action) => {
   switch (action.type) {
     case CHECK_STATUS:
       return 'Under Construction';
@@ -13,4 +13,4 @@ const Categories = (state = [], action) => {
   }
 };
 
-export default Categories;
+export default categories;
