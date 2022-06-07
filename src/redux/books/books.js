@@ -1,7 +1,10 @@
+import { v4 as uuidv4 } from 'uuid';
+import initialBookDataBase from './initialBookDataBase';
+
 // ACTION TYPES
 
-const ADD_BOOK = 'ADD_BOOK';
-const REMOVE_BOOK = 'REMOVE_BOOK';
+const ADD_BOOK = 'BookStore/books/ADD_BOOK';
+const REMOVE_BOOK = 'BookStore/books/REMOVE_BOOK';
 
 // ACTION CREATORS
 
@@ -10,14 +13,14 @@ export const removeBook = (id) => ({ type: REMOVE_BOOK, payload: { id } });
 
 // REDUCER
 
-const books = (state = [], action) => {
+const books = (state = initialBookDataBase, action) => {
   switch (action.type) {
     case ADD_BOOK:
       return [
         ...state,
         {
-          id: state.length,
-          name: action.payload.name,
+          id: uuidv4(),
+          title: action.payload.title,
           author: action.payload.author,
         },
       ];

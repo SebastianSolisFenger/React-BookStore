@@ -1,33 +1,9 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import Book from './Book';
 
 const BooksList = () => {
-  const books = [
-    {
-      id: 1,
-      name: 'The wolf',
-      category: 'Sci-Fi',
-      author: 'Mike Sckot',
-    },
-    {
-      id: 2,
-      name: 'The wolf',
-      category: 'Sci-Fi',
-      author: 'Mike Sckot',
-    },
-    {
-      id: 3,
-      name: 'The wolf',
-      category: 'Sci-Fi',
-      author: 'Mike Sckot',
-    },
-    {
-      id: 4,
-      name: 'The wolf',
-      category: 'Sci-Fi',
-      author: 'Mike Sckot',
-    },
-  ];
+  const books = useSelector((state) => state.books);
 
   return (
     <div>
@@ -36,7 +12,7 @@ const BooksList = () => {
           <Book
             key={book.id}
             id={book.id}
-            name={book.name}
+            title={book.title}
             author={book.author}
           />
         ))}

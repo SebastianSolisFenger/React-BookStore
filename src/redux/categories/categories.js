@@ -1,5 +1,5 @@
 // ACTION TYPES FOR CATEGORIES
-const CHECK_STATUS = 'CHECK_STATUS';
+const CHECK_STATUS = 'bookStore/books/CHECK_STATUS';
 
 // ACTION CREATORS
 export const checkStatus = () => ({ type: CHECK_STATUS });
