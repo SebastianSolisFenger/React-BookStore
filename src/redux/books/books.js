@@ -96,7 +96,7 @@ const books = (state = initialBookStateData, action) => {
     case ADD_BOOK:
       return {
         ...state,
-        loading: true,
+        loading: false,
         books: [...state.books, action.payload],
       };
 
