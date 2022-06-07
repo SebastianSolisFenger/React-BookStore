@@ -7,7 +7,7 @@ const url =
 // ACTION TYPES
 
 const ADD_BOOK = 'BookStore/books/ADD_BOOK';
-const REMOVE_BOOK = 'BookStore/books/REMOVE_BOOK';
+// const REMOVE_BOOK = 'BookStore/books/REMOVE_BOOK';
 const GET_BOOKS_SUCCESS = 'BookStore/books/GET_BOOKS_SUCCESS';
 const GET_BOOKS_FAILURE = 'BookStore/books/GET_BOOKS_FAILURE';
 const GET_BOOKS_LOADING = 'BookStore/books/GET_BOOKS_LOADING';
@@ -15,7 +15,7 @@ const GET_BOOKS_LOADING = 'BookStore/books/GET_BOOKS_LOADING';
 // ACTION CREATORS
 
 export const addBook = (book) => ({ type: ADD_BOOK, payload: book });
-export const removeBook = (id) => ({ type: REMOVE_BOOK, payload: id });
+// export const removeBook = (id) => ({ type: REMOVE_BOOK, payload: id });
 export const getBooksSuccess = (books) => ({
   type: GET_BOOKS_SUCCESS,
   payload: books,
@@ -27,19 +27,6 @@ export const getBooksFailure = (errMessage) => ({
 export const getBooksLoading = () => ({
   type: GET_BOOKS_LOADING,
 });
-
-// REGISTRATION BOOK
-export const registerNewBook = (newBook) => (dispatch) => {
-  fetch(url, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'Application/json',
-    },
-    body: JSON.stringify(newBook),
-  }).then(() => {
-    dispatch(addBook(newBook));
-  });
-};
 
 // get data
 
@@ -61,7 +48,28 @@ export const getBooks = () => (dispatch) => {
     });
 };
 
-// REMOVE BOOK DATA
+// REMOVE BOOKS
+
+export const removeBook = (id) => (dispatch) => {
+  fetch(`${url}/${id}`, {
+    method: 'DELETE',
+  }).then(() => {
+    dispatch(getBooks());
+  });
+};
+
+// REGISTRATION BOOK
+export const registerNewBook = (newBook) => (dispatch) => {
+  fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'Application/json',
+    },
+    body: JSON.stringify(newBook),
+  }).then(() => {
+    dispatch(addBook(newBook));
+  });
+};
 
 // REDUCER
 
