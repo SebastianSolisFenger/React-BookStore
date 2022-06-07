@@ -6,7 +6,6 @@ const url =
 // ACTION TYPES
 
 const ADD_BOOK = 'BookStore/books/ADD_BOOK';
-// const REMOVE_BOOK = 'BookStore/books/REMOVE_BOOK';
 const GET_BOOKS_SUCCESS = 'BookStore/books/GET_BOOKS_SUCCESS';
 const GET_BOOKS_FAILURE = 'BookStore/books/GET_BOOKS_FAILURE';
 const GET_BOOKS_LOADING = 'BookStore/books/GET_BOOKS_LOADING';
@@ -32,7 +31,7 @@ export const getBooksLoading = () => ({
 export const getBooks = () => (dispatch) => {
   dispatch(getBooksLoading());
   fetch(url)
-    .then((response) => response.json)
+    .then((response) => response.json())
     .then((data) => {
       const formattedBooks = [];
       Object.keys(data).forEach((key) => {
