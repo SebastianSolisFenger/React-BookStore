@@ -12,6 +12,7 @@
 }
 
 .main-container {
+  height: 200vh;
   padding: 40px;
   border: 2px solid rgb(57, 57, 57);
   width: 80%;
