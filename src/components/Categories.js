@@ -14,7 +14,6 @@ const Categories = () => {
       <button type="button" onClick={checkStatusEventHandler}>
         Check status
       </button>
-      ;
     </>
   );
 };
