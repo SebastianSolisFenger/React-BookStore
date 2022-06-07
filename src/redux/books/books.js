@@ -1,5 +1,8 @@
-import { v4 as uuidv4 } from 'uuid';
+import { useDispatch } from 'react-redux';
 import initialBookStateData from './initialBookStateData';
+
+const url =
+  'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/GVPYkgVk2vPICoFsmOr6/books';
 
 // ACTION TYPES
 
@@ -17,12 +20,35 @@ export const getBooksSuccess = (books) => ({
   type: GET_BOOKS_SUCCESS,
   payload: books,
 });
-export const getBooksFailure = () => ({
+export const getBooksFailure = (errMessage) => ({
   type: GET_BOOKS_FAILURE,
+  payload: errMessage,
 });
 export const getBooksLoading = () => ({
   type: GET_BOOKS_LOADING,
 });
+
+// get data
+
+export const getBooks = () => (dispatch) => {
+  dispatch(getBooksLoading());
+  fetch(url)
+    .then((response) => response.json)
+    .then((data) => {
+      const formattedBooks = [];
+      Object.keys(data).forEach((key) => {
+        if (key) {
+          formattedBooks.push({ ...data[key][0], item_id: key });
+        }
+      });
+      dispatch(getBooksSuccess(formattedBooks));
+    })
+    .catch((err) => {
+      dispatch(getBooksFailure(err));
+    });
+};
+
+// REMOVE BOOK DATA
 
 // REDUCER
 
