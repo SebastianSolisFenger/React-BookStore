@@ -28,6 +28,19 @@ export const getBooksLoading = () => ({
   type: GET_BOOKS_LOADING,
 });
 
+// REGISTRATION BOOK
+export const registerNewBook = (newBook) => (dispatch) => {
+  fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'Application/json',
+    },
+    body: JSON.stringify(newBook),
+  }).then(() => {
+    dispatch(addBook(newBook));
+  });
+};
+
 // get data
 
 export const getBooks = () => (dispatch) => {
@@ -44,7 +57,7 @@ export const getBooks = () => (dispatch) => {
       dispatch(getBooksSuccess(formattedBooks));
     })
     .catch((err) => {
-      dispatch(getBooksFailure(err));
+      dispatch(getBooksFailure(err.message));
     });
 };
 
