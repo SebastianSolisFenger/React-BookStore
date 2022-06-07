@@ -7,19 +7,19 @@ const books = [
   },
   {
     id: 2,
-    title: 'The wolf',
+    title: 'The bible',
     category: 'Sci-Fi',
     author: 'Mike Sckot',
   },
   {
     id: 3,
-    title: 'The wolf',
+    title: 'Going through',
     category: 'Sci-Fi',
     author: 'Mike Sckot',
   },
   {
     id: 4,
-    title: 'The wolf',
+    title: 'John the baptist',
     category: 'Sci-Fi',
     author: 'Mike Sckot',
   },
