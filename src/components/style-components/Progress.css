@@ -3,3 +3,26 @@
   align-items: center;
   gap: 1.013rem;
 }
+
+.progressDataContainer h3 {
+  font-family: Montserrat, sans-serif;
+  font-size: 2rem;
+  color: var(--black-two);
+}
+
+.progressDataContainer img {
+  width: 5rem;
+  height: 5rem;
+}
+
+.progressDataContainer p {
+  opacity: 0.5;
+  font-family: Montserrat, sans-serif;
+  font-size: 0.875rem;
+  color: var(--black-two);
+}
+
+.percentageProgress {
+  display: flex;
+  flex-direction: column;
+}

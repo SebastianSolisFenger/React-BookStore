@@ -21,11 +21,19 @@ const Book = (props) => {
         <h2>{title}</h2>
         <p>{author}</p>
         <div className="book-btns-container">
-          <button type="button">Comments</button>
-          <button type="button" onClick={removeEventHandler}>
+          <button className="commentbtn" type="button">
+            Comments
+          </button>
+          <button
+            className="removebtn"
+            type="button"
+            onClick={removeEventHandler}
+          >
             Remove
           </button>
-          <button type="button">Edit</button>
+          <button className="editbtn" type="button">
+            Edit
+          </button>
         </div>
       </div>
       <div className="bookProgressSection">
