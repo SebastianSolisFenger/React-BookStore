@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import { registerNewBook } from '../redux/books/books';
+import './style-components/RegisterBook.css';
 
 const RegistrationBook = () => {
   const dispatch = useDispatch();
@@ -37,8 +38,8 @@ const RegistrationBook = () => {
   };
 
   return (
-    <>
-      <h2>Register books</h2>
+    <div className="register-book">
+      <h2>ADD NEW BOOK</h2>
       <form className="register-form" onSubmit={registerEventBookHandler}>
         <input
           type="text"
@@ -61,9 +62,9 @@ const RegistrationBook = () => {
           onChange={updateAuthor}
           required
         />
-        <button type="submit">Register</button>
+        <button type="submit">ADD BOOK</button>
       </form>
-    </>
+    </div>
   );
 };
 
