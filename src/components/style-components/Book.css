@@ -15,6 +15,7 @@
 
 .book-info h2 {
   font-family: RobotoSlab, sans-serif;
+  width: 12.313rem;
   color: var(--black-two);
   font-size: 1.375rem;
   font-weight: bold;
