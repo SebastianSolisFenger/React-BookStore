@@ -24,11 +24,8 @@
   --medium-blue: #307bbe;
 }
 
-.grand-app-container {
-  min-height: 100vh;
-}
-
 .page-body {
+  min-height: 100vh;
   padding: 1.438rem 6.188rem 1.688rem 6.25rem;
 }
 
