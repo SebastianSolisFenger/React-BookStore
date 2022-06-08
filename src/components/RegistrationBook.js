@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import { registerNewBook } from '../redux/books/books';
+import './style-components/RegisterBook.css';
 
 const RegistrationBook = () => {
   const dispatch = useDispatch();
@@ -21,6 +22,13 @@ const RegistrationBook = () => {
     });
   };
 
+  const updateCategory = (e) => {
+    changeBook({
+      ...book,
+      category: e.target.value,
+    });
+  };
+
   const registerEventBookHandler = (e) => {
     e.preventDefault();
     const { title, author, category } = e.target.elements;
@@ -37,33 +45,33 @@ const RegistrationBook = () => {
   };
 
   return (
-    <>
-      <h2>Register books</h2>
+    <div className="register-book">
+      <h2>ADD NEW BOOK</h2>
       <form className="register-form" onSubmit={registerEventBookHandler}>
         <input
           type="text"
           id="title"
-          placeholder="Insert the title.."
+          placeholder="Book title"
           onChange={updateTitle}
           required
         />
         <input
           type="text"
           id="author"
-          placeholder="Insert the author.."
+          placeholder="Author"
           onChange={updateAuthor}
           required
         />
         <input
           type="text"
           id="category"
-          placeholder="Category.."
-          onChange={updateAuthor}
+          placeholder="Category"
+          onChange={updateCategory}
           required
         />
-        <button type="submit">Register</button>
+        <button type="submit">ADD BOOK</button>
       </form>
-    </>
+    </div>
   );
 };
 
