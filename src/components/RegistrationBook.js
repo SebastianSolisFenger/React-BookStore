@@ -22,6 +22,13 @@ const RegistrationBook = () => {
     });
   };
 
+  const updateCategory = (e) => {
+    changeBook({
+      ...book,
+      category: e.target.value,
+    });
+  };
+
   const registerEventBookHandler = (e) => {
     e.preventDefault();
     const { title, author, category } = e.target.elements;
@@ -44,22 +51,22 @@ const RegistrationBook = () => {
         <input
           type="text"
           id="title"
-          placeholder="Insert the title.."
+          placeholder="Book title"
           onChange={updateTitle}
           required
         />
         <input
           type="text"
           id="author"
-          placeholder="Insert the author.."
+          placeholder="Author"
           onChange={updateAuthor}
           required
         />
         <input
           type="text"
           id="category"
-          placeholder="Category.."
-          onChange={updateAuthor}
+          placeholder="Category"
+          onChange={updateCategory}
           required
         />
         <button type="submit">ADD BOOK</button>

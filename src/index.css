@@ -32,7 +32,7 @@
 
 .nav-menu-links {
   display: flex;
-  gap: 12px;
+  gap: 18px;
   list-style: none;
   font-size: 22px;
 }
