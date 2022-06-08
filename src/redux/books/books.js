@@ -13,7 +13,7 @@ const GET_BOOKS_LOADING = 'BookStore/books/GET_BOOKS_LOADING';
 // ACTION CREATORS
 
 export const addBook = (book) => ({ type: ADD_BOOK, payload: book });
-// export const removeBook = (id) => ({ type: REMOVE_BOOK, payload: id });
+
 export const getBooksSuccess = (books) => ({
   type: GET_BOOKS_SUCCESS,
   payload: books,
