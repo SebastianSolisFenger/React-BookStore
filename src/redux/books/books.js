@@ -3,14 +3,10 @@ import initialBookStateData from './initialBookStateData';
 const url =
   'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/GVPYkgVk2vPICoFsmOr6/books';
 
-// ACTION TYPES
-
 const ADD_BOOK = 'BookStore/books/ADD_BOOK';
 const GET_BOOKS_SUCCESS = 'BookStore/books/GET_BOOKS_SUCCESS';
 const GET_BOOKS_FAILURE = 'BookStore/books/GET_BOOKS_FAILURE';
 const GET_BOOKS_LOADING = 'BookStore/books/GET_BOOKS_LOADING';
-
-// ACTION CREATORS
 
 export const addBook = (book) => ({ type: ADD_BOOK, payload: book });
 
@@ -25,8 +21,6 @@ export const getBooksFailure = (errMessage) => ({
 export const getBooksLoading = () => ({
   type: GET_BOOKS_LOADING,
 });
-
-// get data
 
 export const getBooks = () => (dispatch) => {
   dispatch(getBooksLoading());
@@ -46,8 +40,6 @@ export const getBooks = () => (dispatch) => {
     });
 };
 
-// REMOVE BOOKS
-
 export const removeBook = (id) => (dispatch) => {
   fetch(`${url}/${id}`, {
     method: 'DELETE',
@@ -56,7 +48,6 @@ export const removeBook = (id) => (dispatch) => {
   });
 };
 
-// REGISTRATION BOOK
 export const registerNewBook = (newBook) => (dispatch) => {
   fetch(url, {
     method: 'POST',
@@ -68,8 +59,6 @@ export const registerNewBook = (newBook) => (dispatch) => {
     dispatch(addBook(newBook));
   });
 };
-
-// REDUCER
 
 const books = (state = initialBookStateData, action) => {
   switch (action.type) {
