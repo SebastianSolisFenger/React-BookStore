@@ -10,6 +10,8 @@
 
 ## Live Demo
 
+## Design 
+![image](https://user-images.githubusercontent.com/88522494/172724726-a3e922ec-5c75-42a3-83c0-a4fa521dfd3e.png)
 
 ## Getting Started
 
