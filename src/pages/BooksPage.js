@@ -11,7 +11,6 @@ const BooksPage = () => {
 
   return (
     <div className="page-body">
-      <h2>BooksPage</h2>
       <BooksList />
       <hr style={hrStyle} />
       <RegistrationBook />

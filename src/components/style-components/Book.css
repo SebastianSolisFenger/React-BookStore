@@ -1,0 +1,51 @@
+.books-container {
+  padding: 2rem 8rem 2rem 2rem;
+  border: 2px solid var(--grey-border);
+  border-radius: 5px;
+}
+
+.book-info h2 {
+  font-family: RobotoSlab;
+  color: var(--black-two);
+  font-size: 1.375rem;
+  font-weight: bold;
+  letter-spacing: -0.2px;
+  margin: 0.188rem 20.188rem 0 0;
+}
+
+.book-info h3 {
+  width: 3.063rem;
+  height: 1.125rem;
+  margin: 0 2.438rem 0 0;
+  opacity: 0.5;
+  font-family: Montserrat;
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: var(--black-two);
+}
+
+.book-info p {
+  width: 6.688rem;
+  height: 1.188rem;
+  margin: 0.25rem 0 0;
+  font-family: RobotoSlab;
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: var(--cool-blue);
+}
+
+.book-btns-container {
+  margin-top: 1.313rem;
+}
+
+.book-btns-container button {
+  background-color: transparent;
+  width: 4.563rem;
+  height: 1.188rem;
+  margin: 0.188rem 0.938rem 0.125rem 0;
+  font-family: RobotoSlab;
+  font-size: 0.875rem;
+  font-weight: 300;
+  border: none;
+  color: var(--cool-blue);
+}
