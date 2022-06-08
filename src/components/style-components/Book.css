@@ -24,7 +24,7 @@
 
 .book-info h3 {
   height: 1.125rem;
-  margin: 0 2.438rem 0 0;
+  margin: 0 2.438rem 1rem 0;
   opacity: 0.5;
   font-family: Montserrat, sans-serif;
   font-size: 0.875rem;
@@ -63,6 +63,7 @@
   justify-content: space-between;
   flex-basis: 50%;
   flex-grow: 0;
+  padding-right: 20px;
 }
 
 .currentChapterSection {
@@ -73,7 +74,7 @@
 }
 
 .currentChapterSection h3 {
-  margin: 0.438rem 6.813rem 0.25rem 0;
+  margin: 0.438rem 0.813rem 0.25rem 0;
   font-family: RobotoSlab, sans-serif;
   font-size: 1rem;
   font-weight: 300;
