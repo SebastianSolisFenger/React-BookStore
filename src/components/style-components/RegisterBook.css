@@ -20,7 +20,8 @@
   align-items: flex-start;
 }
 
-.register-form input {
+.register-form input,
+select {
   padding: 0.813rem 0 0.813rem 1.063rem;
   border-radius: 5px;
   border: solid 1.5px var(--grey-border);

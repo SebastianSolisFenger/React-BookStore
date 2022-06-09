@@ -6,7 +6,7 @@ import './style-components/RegisterBook.css';
 
 const RegistrationBook = () => {
   const dispatch = useDispatch();
-  const [book, changeBook] = useState({ title: '', author: '' });
+  const [book, changeBook] = useState({ title: '', author: '', category: '' });
 
   const updateTitle = (e) => {
     changeBook({
@@ -62,13 +62,20 @@ const RegistrationBook = () => {
           onChange={updateAuthor}
           required
         />
-        <input
-          type="text"
+
+        <select
+          // value={category}
           id="category"
-          placeholder="Category"
           onChange={updateCategory}
           required
-        />
+        >
+          <option value="">Select Category</option>
+          <option value="Action">Action</option>
+          <option value="Sci-fi">Sci-fi</option>
+          <option value="Drama">Drama</option>
+          <option value="Horror">Horror</option>
+        </select>
+
         <button type="submit">ADD BOOK</button>
       </form>
     </div>
