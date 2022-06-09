@@ -1,3 +1,7 @@
+.register-book {
+  min-height: 30vh;
+}
+
 .register-book h2 {
   width: 24.875rem;
   height: 1.5rem;
