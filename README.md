@@ -12,7 +12,8 @@
 [Netlify](https://magenta-baklava-eb662d.netlify.app/)
 
 ## Design 
-![image](https://user-images.githubusercontent.com/88522494/172893488-db06cd44-5cfc-41a0-8bfa-c5a2c278237e.png)
+![image](https://user-images.githubusercontent.com/88522494/173245222-d1a6e50a-cc63-434f-b737-75baec0dae4f.png)
+
 
 ## Getting Started
 
