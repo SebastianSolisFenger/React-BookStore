@@ -41,7 +41,9 @@ const Book = (props) => {
         <Progress />
         <div className="currentChapterSection">
           <h2>CURRENT CHAPTER</h2>
-          <h3>Chapter 3: &quot;A Lesson Learned&quot;</h3>
+          <h3>
+            Chapter <span>{Math.floor(Math.random() * 60) + 3}</span>
+          </h3>
           <button type="button">UPDATE PROGRESS</button>
         </div>
       </div>
